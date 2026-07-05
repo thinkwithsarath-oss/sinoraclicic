@@ -928,18 +928,18 @@ export default function App() {
                 <div className="md:col-span-7 space-y-8">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-100/80 border border-brand-200 rounded-full text-brand-700 text-xs font-semibold tracking-wider uppercase font-mono animate-float-fast">
                     <ShieldCheck className="w-4 h-4 text-brand-600" />
-                    Clinical Grade Oral Care In Chennai
+                    Premium Dental Clinic in Ashok nagar, Chennai
                   </div>
                   
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
                     Optimized Dental Solutions, <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">
-                      Scientifically Prescribed.
+                      Dental Clinic in Ashok nagar & West Mambalam.
                     </span>
                   </h1>
                   
                   <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                    Welcome to Sinora Dental Hospital. Our facility in Ashok Nagar, Chennai, integrates advanced diagnostic technology with high-precision restorative protocols. We specialize in implants, endodontics, orthodontics, and children's dentistry under strict biological sterilization criteria.
+                    Welcome to Sinora Dental Hospital, the leading <strong>Dental Clinic in Ashok nagar</strong> and <strong>Dental Clinic in west Mambalam</strong>. Our clinical facility integrates advanced diagnostic technology with high-precision clear <strong>Aligners in chennai</strong>, computer-guided <strong>Invisible aligners chennai</strong>, and modern <strong>Invisible braces chennai</strong> under strict biological sterilization criteria.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -1220,13 +1220,13 @@ export default function App() {
             <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
                 <span className="text-xs font-mono font-bold tracking-widest text-brand-600 uppercase block">
-                  CLINICAL EXCELLENCE
+                  Orthodontics, Implants & Dental Clinic in Ashok nagar
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900">
-                  Evidence-Based Treatment Protocols
+                  Invisible Aligners Chennai & Premium Care Protocols
                 </h2>
                 <p className="text-slate-500 leading-relaxed">
-                  Every procedure conducted at Sinora Dental Hospital conforms strictly to biological standards, utilizing high-precision tools and fully documented scientific workflows.
+                  Every procedure conducted at our <strong>Dental Clinic in west Mambalam</strong> and Ashok Nagar conforms strictly to international biological standards. We utilize advanced <strong>Invisible braces chennai</strong> technology and premium <strong>Aligners in chennai</strong> with computer-guided surgical engines for error-free patient smiles.
                 </p>
               </div>
 
@@ -1345,10 +1345,10 @@ export default function App() {
                   <div className="lg:col-span-7 space-y-6">
                     <span className="text-xs font-mono font-bold tracking-widest text-brand-600 uppercase block">PATIENT BIO-SECURITY</span>
                     <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900">
-                      Medical-Grade Sterilization Protocols in Ashok Nagar, Chennai
+                      Dental Clinic in Ashok nagar & West Mambalam Sterilization Excellence
                     </h2>
                     <p className="text-slate-600 leading-relaxed text-sm">
-                      Our sterilization protocol forms the backbone of all clinical interventions at Sinora Dental Hospital. To prevent cross-contamination and ensure patient safety, our facility integrates high-temperature vacuum sterilizers, active aerosol flush systems, and biological indicators to monitor daily safety outputs.
+                      Our elite sterilization loop forms the safety backbone of our <strong>Dental Clinic in Ashok nagar</strong> and neighboring <strong>Dental Clinic in west Mambalam</strong>. When treating patients with high-precision <strong>Aligners in chennai</strong> or placing <strong>Invisible braces chennai</strong>, preventing biological contamination is our absolute highest priority.
                     </p>
                     <p className="text-slate-600 leading-relaxed text-sm">
                       Every patient pack is unwrapped directly in front of the patient in active operatory zones. Our positive pressure cleanroom systems ensure that dental procedures are performed in an aseptic environment, matching leading hospital operating standards.
@@ -1375,9 +1375,11 @@ export default function App() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
                   <span className="text-xs font-mono font-bold tracking-widest text-brand-600 uppercase block">HIGH-TECH DIAGNOSTICS</span>
-                  <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900">Advanced Digital Dentistry & Imaging</h2>
+                  <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-slate-900">
+                    Invisible Aligners Chennai & Advanced Digital Dentistry
+                  </h2>
                   <p className="text-slate-500 leading-relaxed text-sm">
-                    High-precision treatments require absolute clarity. Sinora Dental Hospital utilizes advanced digital scanners, high-frequency imaging, and computer-guided placement engines to map treatments with micrometer accuracy.
+                    High-precision treatments require absolute clarity. As the leading provider of <strong>Invisible aligners chennai</strong>, our <strong>Dental Clinic in Ashok nagar</strong> utilizes advanced digital intraoral scanners, high-frequency imaging, and computer-guided placement engines to map <strong>Aligners in chennai</strong> with micrometer accuracy.
                   </p>
                 </div>
 
@@ -1468,10 +1470,10 @@ export default function App() {
                     ONLINE APPOINTMENT REGISTRATION
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-white">
-                    Interactive Scheduling Portal
+                    Register with Ashok Nagar & West Mambalam's Top Dental Clinic
                   </h2>
                   <p className="text-brand-100 text-sm leading-relaxed">
-                    Lock in your medical-grade therapy appointment immediately. Follow the multi-step diagnostics form below to compile your clinical registration and print your security pass.
+                    Instantly book your consultation for premium <strong>Aligners in chennai</strong>, computer-guided <strong>Invisible aligners chennai</strong>, or modern <strong>Invisible braces chennai</strong>. Bypassing wait times at our <strong>Dental Clinic in Ashok nagar</strong> or <strong>Dental Clinic in west Mambalam</strong> takes under 2 minutes.
                   </p>
                 </div>
 
