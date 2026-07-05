@@ -1,0 +1,6 @@
+{
+  "name": "Sinora Dental Hospital",
+  "description": "Premium SEO, AEO, and GEO optimized full-stack website for Sinora Dental Hospital in Ashok Nagar, Chennai, featuring interactive appointment scheduling and an AI-powered dental assistant.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
