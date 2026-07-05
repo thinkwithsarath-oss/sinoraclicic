@@ -674,43 +674,50 @@ export default function App() {
 
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium">
             <button 
-              onClick={() => setActiveTab("home")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("home"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "home" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               Home
             </button>
             <button 
-              onClick={() => setActiveTab("services")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("services"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "services" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               Treatments
             </button>
             <button 
-              onClick={() => setActiveTab("about")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("about"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "about" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               About Us
             </button>
             <button 
-              onClick={() => setActiveTab("blog")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("blog"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "blog" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               Blog
             </button>
             <button 
-              onClick={() => setActiveTab("faq")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("faq"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "faq" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               FAQ
             </button>
             <button 
-              onClick={() => setActiveTab("contact")} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); setActiveTab("contact"); }} 
               className={`pb-1 border-b-2 transition-all cursor-pointer ${activeTab === "contact" ? "border-brand-600 text-brand-600 font-semibold" : "border-transparent text-slate-600 hover:text-brand-500"}`}
             >
               Contact
             </button>
             <button 
-              onClick={scrollToScheduler} 
+              type="button"
+              onClick={(e) => { e.preventDefault(); scrollToScheduler(); }} 
               className="px-4 py-2.5 bg-brand-600 text-white rounded-xl shadow-md shadow-brand-100 hover:bg-brand-700 active:scale-95 transition-all text-xs font-semibold uppercase tracking-wider flex items-center gap-2 cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
@@ -786,7 +793,9 @@ export default function App() {
                 {/* Navigation Links */}
                 <nav className="flex flex-col gap-2.5">
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("home");
                       setMobileMenuOpen(false);
                     }}
@@ -801,7 +810,9 @@ export default function App() {
                   </button>
 
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("services");
                       setMobileMenuOpen(false);
                     }}
@@ -816,7 +827,9 @@ export default function App() {
                   </button>
 
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("about");
                       setMobileMenuOpen(false);
                     }}
@@ -831,7 +844,9 @@ export default function App() {
                   </button>
 
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("blog");
                       setMobileMenuOpen(false);
                     }}
@@ -846,7 +861,9 @@ export default function App() {
                   </button>
 
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("faq");
                       setMobileMenuOpen(false);
                     }}
@@ -861,7 +878,9 @@ export default function App() {
                   </button>
 
                   <button
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab("contact");
                       setMobileMenuOpen(false);
                     }}
@@ -907,198 +926,285 @@ export default function App() {
           <div className="overflow-hidden">
             
             {/* HERO HERO SECTION */}
-            <section className="relative bg-gradient-to-b from-brand-50/50 to-white pt-16 pb-24 overflow-hidden">
-              <div className="absolute inset-0 z-0 opacity-40">
-                {/* Visual geometric meshes instead of images */}
-                <div className="absolute top-20 left-10 w-96 h-96 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }}></div>
+            <section className="relative bg-gradient-to-br from-slate-50 via-white to-brand-50/40 pt-20 pb-28 overflow-hidden border-b border-slate-100">
+              {/* Premium Background Mesh with interactive floating glassmorphic blobs and subtle grid */}
+              <div className="absolute inset-0 z-0">
+                {/* Framer-Motion Animated Blobs with organic floating trajectories and scales */}
+                <motion.div 
+                  animate={{ 
+                    x: [0, 50, -40, 20, 0], 
+                    y: [0, -60, 40, -20, 0],
+                    scale: [1, 1.12, 0.95, 1.05, 1],
+                    rotate: [0, 45, 90, 135, 180]
+                  }}
+                  transition={{ 
+                    duration: 20, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="absolute top-10 left-10 w-[550px] h-[550px] bg-gradient-to-tr from-brand-100/30 to-indigo-100/20 rounded-full filter blur-3xl opacity-70"
+                />
                 
-                {/* Absolute SVG vector blueprints */}
-                <svg className="absolute top-1/4 right-1/4 w-72 h-72 text-brand-100/50" fill="none" stroke="currentColor" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="45" strokeWidth="0.5" strokeDasharray="3 3" />
-                  <circle cx="50" cy="50" r="30" strokeWidth="0.5" />
-                  <line x1="50" y1="5" x2="50" y2="95" strokeWidth="0.5" strokeDasharray="1 1" />
-                  <line x1="5" y1="50" x2="95" y2="50" strokeWidth="0.5" strokeDasharray="1 1" />
-                </svg>
+                <motion.div 
+                  animate={{ 
+                    x: [0, -60, 40, -30, 0], 
+                    y: [0, 50, -60, 30, 0],
+                    scale: [1, 0.9, 1.1, 0.95, 1],
+                    rotate: [180, 275, 360, 275, 180]
+                  }}
+                  transition={{ 
+                    duration: 24, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-gradient-to-br from-indigo-100/30 to-brand-100/20 rounded-full filter blur-3xl opacity-70"
+                />
+
+                {/* Third complementary glowing accent for enhanced warmth */}
+                <motion.div 
+                  animate={{ 
+                    scale: [0.8, 1.1, 0.8],
+                    opacity: [0.3, 0.6, 0.3]
+                  }}
+                  transition={{ 
+                    duration: 15, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="absolute top-1/2 left-1/3 w-80 h-80 bg-emerald-100/20 rounded-full filter blur-3xl"
+                />
+
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#0284c7_0.03em,transparent_0.03em),linear-gradient(to_bottom,#0284c7_0.03em,transparent_0.03em)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.04]"></div>
               </div>
 
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-12 gap-12 items-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-16 items-center">
                 
-                {/* Left Side: Copy */}
-                <div className="md:col-span-7 space-y-8">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-100/80 border border-brand-200 rounded-full text-brand-700 text-xs font-semibold tracking-wider uppercase font-mono animate-float-fast">
-                    <ShieldCheck className="w-4 h-4 text-brand-600" />
-                    Premium Dental Clinic in Ashok nagar, Chennai
+                {/* Left Side: Rich Copy with premium font pairings & visual anchors */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="lg:col-span-7 space-y-8 text-left"
+                >
+                  <motion.div 
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-700 text-xs font-bold tracking-wider uppercase font-mono shadow-sm animate-float-fast"
+                  >
+                    <span className="flex h-2 w-2 relative">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>ISO-7 Sterile Clinic Suite • Chennai</span>
+                  </motion.div>
+                  
+                  <div className="space-y-4">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-slate-900 leading-[1.1]">
+                      <span className="block text-slate-900">Elite Oral Science at Chennai's Top</span>
+                      <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-700 font-extrabold">
+                        Dental Clinic in Ashok nagar & West Mambalam.
+                      </span>
+                    </h1>
                   </div>
                   
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-                    Optimized Dental Solutions, <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">
-                      Dental Clinic in Ashok nagar & West Mambalam.
-                    </span>
-                  </h1>
-                  
-                  <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                    Welcome to Sinora Dental Hospital, the leading <strong>Dental Clinic in Ashok nagar</strong> and <strong>Dental Clinic in west Mambalam</strong>. Our clinical facility integrates advanced diagnostic technology with high-precision clear <strong>Aligners in chennai</strong>, computer-guided <strong>Invisible aligners chennai</strong>, and modern <strong>Invisible braces chennai</strong> under strict biological sterilization criteria.
+                  <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+                    Welcome to <span className="font-bold text-slate-900">Sinora Dental Hospital</span>, the premier certified <strong>Dental Clinic in Ashok nagar</strong> and <strong>Dental Clinic in west Mambalam</strong>. Our world-class clinical environment integrates computer-guided <strong>Invisible aligners chennai</strong>, ultra-precise clear <strong>Aligners in chennai</strong>, and modern <strong>Invisible braces chennai</strong> with flawless biological sterilization.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button 
-                      onClick={scrollToScheduler}
-                      className="px-8 py-4 bg-brand-600 text-white font-semibold rounded-xl shadow-lg shadow-brand-100 hover:bg-brand-700 active:scale-98 hover:shadow-brand-200 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-3 group"
+                  <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                    <motion.button 
+                      whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(15, 23, 42, 0.15)" }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => scrollToScheduler()}
+                      className="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-lg shadow-slate-900/10 hover:bg-slate-800 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-3 group cursor-pointer"
                     >
-                      <span>Interactive Scheduler</span>
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button 
-                      onClick={() => { setActiveTab("services"); }}
-                      className="px-8 py-4 bg-white text-slate-700 border border-slate-200 font-semibold rounded-xl hover:bg-slate-50 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2"
-                    >
-                      Explore Clinical Treatments
-                    </button>
-                  </div>
-
-                  {/* Trust metrics */}
-                  <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-100 max-w-xl">
-                    <div>
-                      <span className="block text-3xl font-bold text-slate-900">98.2%</span>
-                      <span className="block text-xs font-mono text-slate-500 uppercase tracking-wider mt-1">Implant Success</span>
-                    </div>
-                    <div>
-                      <span className="block text-3xl font-bold text-slate-900">ISO-7</span>
-                      <span className="block text-xs font-mono text-slate-500 uppercase tracking-wider mt-1">Sterilization</span>
-                    </div>
-                    <div>
-                      <span className="block text-3xl font-bold text-slate-900">3D CBCT</span>
-                      <span className="block text-xs font-mono text-slate-500 uppercase tracking-wider mt-1">Diagnostics</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Side: Abstract Clinical Graphics (Strict No-Image Constraint) */}
-                <div className="md:col-span-5 relative flex justify-center">
-                  <div className="w-full max-w-md aspect-square bg-gradient-to-tr from-brand-100/40 to-indigo-50 rounded-2xl border border-slate-200/60 p-8 flex flex-col justify-between relative overflow-hidden shadow-xl animate-float-slow">
+                      <span>Book Appointment Ticket</span>
+                      <ChevronRight className="w-4 h-4 text-brand-400 group-hover:translate-x-1 transition-transform" />
+                    </motion.button>
                     
-                    {/* Glowing grid effect in background */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+                    <motion.button 
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => { setActiveTab("services"); }}
+                      className="px-8 py-4 bg-white text-slate-700 border border-slate-200/85 font-bold rounded-xl hover:border-slate-300 hover:bg-slate-50 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    >
+                      Clinical Treatments Guide
+                    </motion.button>
+                  </div>
 
-                    {/* Top corner tag */}
-                    <div className="relative z-10 flex justify-between items-start">
-                      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-100 shadow-md">
-                        <Activity className="w-6 h-6 text-brand-600" />
-                      </div>
-                      <span className="px-3 py-1 bg-white border border-slate-200 rounded-full text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider shadow-sm">
-                        SYSTEM READY
-                      </span>
-                    </div>
+                  {/* High fidelity trust scorecards */}
+                  <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-100 max-w-xl">
+                    <motion.div 
+                      whileHover={{ y: -3 }}
+                      className="space-y-1"
+                    >
+                      <span className="block text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-slate-900">98.2%</span>
+                      <span className="block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest leading-none">Implant Success</span>
+                    </motion.div>
+                    <motion.div 
+                      whileHover={{ y: -3 }}
+                      className="space-y-1 border-l border-slate-100 pl-6"
+                    >
+                      <span className="block text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-brand-600">ISO-7</span>
+                      <span className="block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest leading-none">Class B Sterile</span>
+                    </motion.div>
+                    <motion.div 
+                      whileHover={{ y: -3 }}
+                      className="space-y-1 border-l border-slate-100 pl-6"
+                    >
+                      <span className="block text-3xl sm:text-4xl font-extrabold font-mono tracking-tight text-indigo-600">3D</span>
+                      <span className="block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest leading-none">CBCT Scan Lab</span>
+                    </motion.div>
+                  </div>
+                </motion.div>
 
-                    {/* Floating Live Clinic Wait Time & Status card inside graphic */}
-                    <div className="relative z-10 bg-white border border-slate-200/80 p-5 rounded-2xl shadow-xl space-y-4 w-full">
-                      <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
-                        <div className="flex items-center gap-1.5 text-slate-800">
-                          <Clock className="w-4 h-4 text-brand-600 animate-pulse" />
-                          <span className="text-xs font-bold tracking-wider uppercase font-mono">
-                            Live Clinic Monitor
-                          </span>
+                {/* Right Side: Ultra Premium Interactive Clinical Dashboard Widget */}
+                <motion.div 
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                  whileHover={{ y: -6 }}
+                  className="lg:col-span-5 relative flex justify-center w-full"
+                >
+                  <div className="w-full max-w-md bg-white rounded-3xl border border-slate-200/80 p-6 flex flex-col justify-between relative overflow-hidden shadow-2xl transition-shadow">
+                    
+                    {/* Glowing mesh accents inside card */}
+                    <div className="absolute -right-10 -top-10 w-32 h-32 bg-indigo-100 rounded-full filter blur-2xl opacity-50"></div>
+                    <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-brand-100 rounded-full filter blur-2xl opacity-50"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1.5px,transparent_1.5px),linear-gradient(to_bottom,#f1f5f9_1.5px,transparent_1.5px)] bg-[size:16px_16px] opacity-40"></div>
+                    
+                    <div className="relative z-10 space-y-6">
+                      {/* Top status controller bar */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center border border-brand-100/50">
+                            <Activity className="w-5 h-5 text-brand-600 animate-pulse" />
+                          </div>
+                          <div className="text-left">
+                            <span className="block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest leading-none">ASHOK NAGAR CENTER</span>
+                            <span className="block text-xs font-bold text-slate-800 mt-1">Status: Active Triage</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-1.5">
-                          <span className={`w-2 h-2 rounded-full ${
-                            waitTimes.statusLevel === "optimal" 
-                              ? "bg-emerald-500" 
-                              : waitTimes.statusLevel === "moderate" 
-                              ? "bg-amber-500" 
-                              : "bg-rose-500"
-                          } animate-pulse`}></span>
-                          <span className="text-[10px] font-mono font-bold uppercase text-slate-500">
-                            Live Radar
-                          </span>
-                        </div>
+                        <span className="px-2.5 py-1 bg-emerald-50 border border-emerald-100 text-emerald-700 text-[10px] font-mono font-bold rounded-lg uppercase tracking-wide">
+                          ONLINE
+                        </span>
                       </div>
-                      
-                      <div className="flex items-center justify-between bg-slate-50 border border-slate-100 p-3 rounded-xl">
-                        <div className="space-y-0.5 text-left">
-                          <span className="block text-[9px] font-mono font-bold text-slate-400 uppercase">
-                            CURRENT EST. WAIT
-                          </span>
-                          <div className="flex items-baseline gap-1">
-                            <span className={`text-2xl font-extrabold font-mono tracking-tight ${
+
+                      {/* Floating Live Clinic Wait Time & Status card inside graphic */}
+                      <div className="bg-slate-900 text-white p-5 rounded-2xl shadow-lg space-y-4">
+                        <div className="flex items-center justify-between border-b border-white/10 pb-2.5">
+                          <div className="flex items-center gap-1.5">
+                            <Clock className="w-4 h-4 text-brand-400 animate-pulse" />
+                            <span className="text-xs font-bold tracking-wider uppercase font-mono text-white/90">
+                              Live Clinic Monitor
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className={`w-2 h-2 rounded-full ${
                               waitTimes.statusLevel === "optimal" 
-                                ? "text-emerald-600" 
+                                ? "bg-emerald-400" 
                                 : waitTimes.statusLevel === "moderate" 
-                                ? "text-amber-600" 
-                                : "text-rose-600"
+                                ? "bg-amber-400" 
+                                : "bg-rose-400"
+                            } animate-pulse`}></span>
+                            <span className="text-[9px] font-mono font-bold uppercase text-white/60">
+                              Active Sensor
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-xl">
+                          <div className="space-y-0.5 text-left">
+                            <span className="block text-[8px] font-mono font-bold text-white/50 uppercase">
+                              CURRENT EST. WAIT
+                            </span>
+                            <div className="flex items-baseline gap-1">
+                              <span className={`text-2xl sm:text-3xl font-extrabold font-mono tracking-tight ${
+                                waitTimes.statusLevel === "optimal" 
+                                  ? "text-emerald-400" 
+                                  : waitTimes.statusLevel === "moderate" 
+                                  ? "text-amber-400" 
+                                  : "text-rose-400"
+                              }`}>
+                                {waitTimes.waitTimeMinutes} MINS
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="text-right">
+                            <span className={`inline-block px-2.5 py-1 rounded text-[9px] font-bold font-mono uppercase ${
+                              waitTimes.statusLevel === "optimal" 
+                                ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" 
+                                : waitTimes.statusLevel === "moderate" 
+                                ? "bg-amber-500/20 text-amber-300 border border-amber-500/30" 
+                                : "bg-rose-500/20 text-rose-300 border border-rose-500/30"
                             }`}>
-                              {waitTimes.waitTimeMinutes} MINS
+                              {waitTimes.statusLevel === "optimal" 
+                                ? "Optimal Volume" 
+                                : waitTimes.statusLevel === "moderate" 
+                                ? "Moderate Traffic" 
+                                : "High Demand"}
+                            </span>
+                            <span className="block text-[9px] text-white/60 font-mono mt-1">
+                              {waitTimes.patientsInQueue} {waitTimes.patientsInQueue === 1 ? "patient" : "patients"} waiting
                             </span>
                           </div>
                         </div>
 
-                        <div className="text-right">
-                          <span className={`inline-block px-2 py-1 rounded text-[9px] font-bold font-mono uppercase ${
-                            waitTimes.statusLevel === "optimal" 
-                              ? "bg-emerald-50 text-emerald-700 border border-emerald-100" 
-                              : waitTimes.statusLevel === "moderate" 
-                              ? "bg-amber-50 text-amber-700 border border-amber-100" 
-                              : "bg-rose-50 text-rose-700 border border-rose-100"
-                          }`}>
-                            {waitTimes.statusLevel === "optimal" 
-                              ? "Optimal Volume" 
-                              : waitTimes.statusLevel === "moderate" 
-                              ? "Moderate Traffic" 
-                              : "High Demand"}
-                          </span>
-                          <span className="block text-[9px] text-slate-400 font-mono mt-1">
-                            {waitTimes.patientsInQueue} {waitTimes.patientsInQueue === 1 ? "patient" : "patients"} waiting
-                          </span>
+                        <div className="grid grid-cols-2 gap-2 text-left text-[11px] border-t border-white/5 pt-2 text-white/80">
+                          <div className="p-2.5 bg-white/5 rounded-lg border border-white/5">
+                            <span className="block text-[8px] font-mono text-white/40 uppercase">CHAIR CAPACITIES</span>
+                            <span className="font-semibold">{waitTimes.activeChairs} of 5 Active</span>
+                          </div>
+                          <div className="p-2.5 bg-white/5 rounded-lg border border-white/5">
+                            <span className="block text-[8px] font-mono text-white/40 uppercase">STERILE INDEX</span>
+                            <span className="font-semibold text-emerald-400">ISO-7 Class B</span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="grid grid-cols-2 gap-2 text-left text-xs border-t border-slate-50 pt-2">
-                        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100">
-                          <span className="block text-[8px] font-mono text-slate-400 uppercase">ACTIVE CHAIRS</span>
-                          <span className="font-semibold text-slate-800">{waitTimes.activeChairs} of 5 Active</span>
+                        {/* Refresh Button & Timestamp */}
+                        <div className="flex items-center justify-between pt-1 text-[9px] font-mono text-white/40">
+                          <div className="flex items-center gap-1">
+                            <span>Last sync:</span>
+                            <span className="font-semibold text-white/70">{waitTimes.lastUpdated}</span>
+                          </div>
+                          <button
+                            onClick={recalculateWaitTime}
+                            disabled={isWaitTimeRefreshing}
+                            className="flex items-center gap-1.5 text-brand-400 hover:text-brand-300 font-bold transition-colors cursor-pointer disabled:opacity-50"
+                          >
+                            <RefreshCw className={`w-3.5 h-3.5 ${isWaitTimeRefreshing ? "animate-spin" : ""}`} />
+                            <span>{isWaitTimeRefreshing ? "Syncing..." : "Sync Sensor"}</span>
+                          </button>
                         </div>
-                        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100">
-                          <span className="block text-[8px] font-mono text-slate-400 uppercase">STERILIZATION</span>
-                          <span className="font-semibold text-emerald-600">ISO-7 Class B</span>
-                        </div>
-                      </div>
 
-                      {/* Refresh Button & Timestamp */}
-                      <div className="flex items-center justify-between pt-1 text-[9px] font-mono text-slate-400">
-                        <div className="flex items-center gap-1">
-                          <span>Updated at:</span>
-                          <span className="font-semibold text-slate-600">{waitTimes.lastUpdated}</span>
-                        </div>
-                        <button
-                          onClick={recalculateWaitTime}
-                          disabled={isWaitTimeRefreshing}
-                          className="flex items-center gap-1.5 hover:text-brand-600 font-bold transition-colors cursor-pointer disabled:opacity-50"
+                        {/* Quick scheduler CTA */}
+                        <button 
+                          onClick={() => scrollToScheduler()}
+                          className="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md shadow-brand-500/10 cursor-pointer"
                         >
-                          <RefreshCw className={`w-3.5 h-3.5 ${isWaitTimeRefreshing ? "animate-spin text-brand-600" : ""}`} />
-                          <span>{isWaitTimeRefreshing ? "Scanning..." : "Sync Sensor"}</span>
+                          <span>Lock Virtual Ticket</span>
+                          <ChevronRight className="w-3.5 h-3.5" />
                         </button>
                       </div>
 
-                      {/* Quick scheduler CTA */}
-                      <button 
-                        onClick={scrollToScheduler}
-                        className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm"
-                      >
-                        <span>Initiate Virtual Ticket</span>
-                        <ChevronRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-
-                    {/* Factual footnote */}
-                    <div className="relative z-10 text-[10px] text-slate-400 font-mono flex items-center gap-1.5">
-                      <Info className="w-3.5 h-3.5 text-brand-500 flex-shrink-0" />
-                      <span>Data compiled under Chennai health board criteria.</span>
+                      {/* Interactive Help Prompt */}
+                      <div className="flex items-center gap-3 bg-slate-50 border border-slate-100 p-3 rounded-2xl text-left text-xs">
+                        <Info className="w-4.5 h-4.5 text-brand-600 flex-shrink-0" />
+                        <span className="text-slate-500">
+                          Register online to bypass active physical queue lines instantly. 
+                        </span>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Absolute glowing secondary badge */}
-                  <div className="absolute -bottom-6 -left-6 bg-white border border-slate-100 p-4 rounded-xl shadow-lg hidden sm:flex items-center gap-3 max-w-xs animate-float-medium">
+                  {/* Absolute secondary floating badge with premium float effect */}
+                  <motion.div 
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-6 -left-6 bg-white border border-slate-200/60 p-4 rounded-2xl shadow-lg hidden sm:flex items-center gap-3 max-w-xs z-20"
+                  >
                     <div className="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center text-brand-600">
                       <Phone className="w-4 h-4" />
                     </div>
@@ -1106,8 +1212,8 @@ export default function App() {
                       <span className="block text-[10px] font-mono text-slate-400 uppercase tracking-widest leading-none">HOTLINE</span>
                       <span className="block text-sm font-bold text-slate-900 mt-1">08056419529</span>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
 
               </div>
             </section>
@@ -1231,55 +1337,81 @@ export default function App() {
               </div>
 
               {/* Bento styled list */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div 
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true, margin: "-80px" }} 
+                variants={{ 
+                  hidden: { opacity: 0 }, 
+                  visible: { 
+                    opacity: 1, 
+                    transition: { staggerChildren: 0.12 } 
+                  } 
+                }} 
+                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              >
                 {CLINICAL_SERVICES.map((srv, index) => {
                   return (
-                    <div 
+                    <motion.div 
                       key={srv.id} 
-                      className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:border-brand-200 relative overflow-hidden"
+                      variants={{
+                        hidden: { opacity: 0, y: 30 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+                      }}
+                      whileHover={{ y: -10, boxShadow: "0 25px 50px -12px rgba(2, 132, 199, 0.08)", borderColor: "rgb(186, 230, 253)" }}
+                      className="bg-gradient-to-br from-white to-slate-50/60 border border-slate-200/70 rounded-3xl p-7 shadow-sm transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
                     >
                       <div className="space-y-4">
                         <div className="flex justify-between items-start">
-                          <div className="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-115 group-hover:bg-indigo-50 group-hover:text-indigo-600 group-hover:shadow-md group-hover:shadow-indigo-100/50 group-hover:animate-pulse group-hover:rotate-6">
-                            {srv.id === "implants" && <Award className="w-5 h-5" />}
-                            {srv.id === "root-canal" && <Activity className="w-5 h-5" />}
-                            {srv.id === "orthodontics" && <Sparkles className="w-5 h-5" />}
-                            {srv.id === "pediatric" && <Smile className="w-5 h-5" />}
-                            {srv.id === "periodontics" && <ShieldCheck className="w-5 h-5" />}
+                          <div className="w-11 h-11 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-indigo-50 group-hover:text-indigo-600 group-hover:shadow-md group-hover:rotate-6">
+                            {srv.id === "implants" && <Award className="w-5.5 h-5.5" />}
+                            {srv.id === "root-canal" && <Activity className="w-5.5 h-5.5" />}
+                            {srv.id === "orthodontics" && <Sparkles className="w-5.5 h-5.5" />}
+                            {srv.id === "pediatric" && <Smile className="w-5.5 h-5.5" />}
+                            {srv.id === "periodontics" && <ShieldCheck className="w-5.5 h-5.5" />}
                           </div>
-                          <span className="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider">
-                            ID: {srv.id.toUpperCase()}
+                          <span className="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider bg-slate-100 px-2.5 py-1 rounded-lg">
+                            {srv.id.toUpperCase()}
                           </span>
                         </div>
                         
-                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
-                          {srv.title}
-                        </h3>
+                        <div className="space-y-1.5 text-left">
+                          <h3 className="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors tracking-tight">
+                            {srv.title}
+                          </h3>
+                          <span className="block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">Clinical Specialty</span>
+                        </div>
                         
-                        <p className="text-sm text-slate-500 leading-relaxed">
+                        <p className="text-sm text-slate-600 leading-relaxed text-left">
                           {srv.shortDesc}
                         </p>
 
-                        <div className="pt-2">
-                          <span className="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider block">KEY INDICATOR:</span>
-                          <span className="text-xs text-brand-600 font-medium block mt-1">{srv.symptoms[0]}</span>
+                        <div className="pt-3 border-t border-slate-100 text-left">
+                          <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block mb-2">Primary Symptoms Treated:</span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {srv.symptoms.slice(0, 2).map((sym, symIdx) => (
+                              <span key={symIdx} className="px-2 py-0.5 bg-slate-50 border border-slate-200/60 text-slate-600 text-[11px] rounded-md font-medium">
+                                {sym}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t border-slate-100 mt-6 flex justify-between items-center">
-                        <span className="text-xs font-mono text-slate-400">{srv.duration}</span>
+                      <div className="pt-5 border-t border-slate-100 mt-5 flex justify-between items-center relative z-10">
+                        <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">{srv.duration}</span>
                         <button 
                           onClick={() => { setSelectedService(srv); setActiveTab("services"); }}
-                          className="text-xs font-semibold text-brand-600 group-hover:text-brand-700 flex items-center gap-1.5 transition-colors"
+                          className="text-xs font-bold text-brand-600 group-hover:text-brand-700 flex items-center gap-1.5 transition-colors cursor-pointer"
                         >
                           <span>Review Protocols</span>
-                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </button>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
             </section>
 
             {/* SECTION 4: ISO-7 BIOLOGICAL SECURITY & STERILIZATION SUITE */}
