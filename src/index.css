@@ -6,12 +6,12 @@
   --font-display: "Outfit", sans-serif;
   --font-mono: "Fira Code", monospace;
   
-  --color-brand-50: #f0f7ff;
-  --color-brand-100: #e0effe;
-  --color-brand-500: #0284c7;
-  --color-brand-600: #025091;
-  --color-brand-700: #0369a1;
-  --color-brand-900: #0c4a6e;
+  --color-brand-50: #f0f6ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-500: #0066cc;
+  --color-brand-600: #0052cc;
+  --color-brand-700: #003d99;
+  --color-brand-900: #001f4d;
 }
 
 @layer base {
@@ -66,6 +66,41 @@
   50% {
     transform: translateY(-8px);
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 40s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
 }
 
 .animate-pulse-slow {
