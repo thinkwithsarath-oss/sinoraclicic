@@ -37,7 +37,9 @@ import {
   DollarSign,
   Layers,
   Users,
-  RefreshCw
+  RefreshCw,
+  Stethoscope,
+  Zap
 } from "lucide-react";
 import { HOSPITAL_METADATA, ClinicalService, AppointmentRecord, ChatMessage } from "./types";
 
@@ -52,7 +54,6 @@ import SinoraLogo from "./components/SinoraLogo";
 import RegistrationModal from "./components/RegistrationModal";
 import { generateICSLink } from "./utils/calendar";
 import { HelpCircle } from "lucide-react";
-import GoogleReviewsWidget from "./components/GoogleReviewsWidget";
 
 // High-authority, GEO & SEO-optimized clinical services data
 const CLINICAL_SERVICES: ClinicalService[] = [
@@ -267,11 +268,6 @@ const CLINICAL_SPECIALISTS = [
 ];
 
 export default function App() {
-  const GOOGLE_MAPS_API_KEY =
-    process.env.GOOGLE_MAPS_PLATFORM_KEY ||
-    (import.meta as any).env?.VITE_GOOGLE_MAPS_PLATFORM_KEY ||
-    "";
-
   // Navigation / View State
   const [activeTab, setActiveTab] = useState<"home" | "services" | "schedule" | "about" | "contact" | "blog" | "faq" | "admin">("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1173,6 +1169,105 @@ export default function App() {
                     <MessageSquare className="w-6 h-6 stroke-[1.2]" />
                   </motion.div>
                 </motion.div>
+
+                {/* 9. Extra Center-Left Lower - Stethoscope */}
+                <motion.div
+                  className="absolute left-[22%] top-[55%] z-0 hidden lg:block"
+                  animate={{
+                    x: heroMousePos.x * 20,
+                    y: heroMousePos.y * -20,
+                  }}
+                  transition={{ type: "spring", stiffness: 45, damping: 22 }}
+                >
+                  <motion.div
+                    animate={{
+                      y: [0, -10, 0],
+                      scale: [1, 1.07, 1],
+                    }}
+                    transition={{
+                      duration: 9.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="text-brand-500/10"
+                  >
+                    <Stethoscope className="w-8 h-8 stroke-[1.1]" />
+                  </motion.div>
+                </motion.div>
+
+                {/* 10. Extra Center-Right Upper - Zap (Laser Dentistry) */}
+                <motion.div
+                  className="absolute right-[32%] top-[18%] z-0 hidden lg:block"
+                  animate={{
+                    x: heroMousePos.x * -35,
+                    y: heroMousePos.y * 25,
+                  }}
+                  transition={{ type: "spring", stiffness: 55, damping: 18 }}
+                >
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.2, 0.9, 1],
+                      rotate: [0, 10, -10, 0],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="text-amber-500/10"
+                  >
+                    <Zap className="w-7 h-7 stroke-[1.2]" />
+                  </motion.div>
+                </motion.div>
+
+                {/* 11. Extra Center-Left Bottom - Clock (Operations & On-time Appointments) */}
+                <motion.div
+                  className="absolute left-[34%] top-[78%] z-0 hidden lg:block"
+                  animate={{
+                    x: heroMousePos.x * 30,
+                    y: heroMousePos.y * 15,
+                  }}
+                  transition={{ type: "spring", stiffness: 40, damping: 25 }}
+                >
+                  <motion.div
+                    animate={{
+                      rotate: [0, 360],
+                    }}
+                    transition={{
+                      duration: 35,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="text-slate-300/30"
+                  >
+                    <Clock className="w-6 h-6 stroke-[1.2]" />
+                  </motion.div>
+                </motion.div>
+
+                {/* 12. Extra Center-Right Lower - MapPin (Ashok Nagar Clinic locator) */}
+                <motion.div
+                  className="absolute right-[16%] top-[58%] z-0 hidden md:block"
+                  animate={{
+                    x: heroMousePos.x * -25,
+                    y: heroMousePos.y * -30,
+                  }}
+                  transition={{ type: "spring", stiffness: 48, damping: 21 }}
+                >
+                  <motion.div
+                    animate={{
+                      y: [0, -12, 0],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="text-brand-500/15"
+                  >
+                    <MapPin className="w-7 h-7 stroke-[1.2]" />
+                  </motion.div>
+                </motion.div>
               </div>
 
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-10">
@@ -1329,100 +1424,6 @@ export default function App() {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-
-                {/* CENTERED LIVE CLINIC MONITOR MODULE - Preserve wait times tracking in beautiful secondary layout */}
-                <div className="max-w-2xl mx-auto pt-6">
-                  <div className="bg-slate-900 text-white p-5 rounded-3xl shadow-xl space-y-4 text-left border border-slate-800 relative overflow-hidden">
-                    <div className="absolute -right-20 -top-20 w-40 h-40 bg-brand-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
-                    <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-brand-100/10 rounded-full filter blur-2xl pointer-events-none"></div>
-
-                    <div className="flex items-center justify-between border-b border-white/10 pb-2.5 relative z-10">
-                      <div className="flex items-center gap-1.5">
-                        <Clock className="w-4 h-4 text-brand-500 animate-pulse" />
-                        <span className="text-xs font-bold tracking-wider uppercase font-mono text-white/90">
-                          Live Clinic Operations Monitor
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <span className={`w-2 h-2 rounded-full ${
-                          waitTimes.statusLevel === "optimal" 
-                            ? "bg-blue-400" 
-                            : waitTimes.statusLevel === "moderate" 
-                            ? "bg-blue-200" 
-                            : "bg-slate-400"
-                        } animate-pulse`}></span>
-                        <span className="text-[9px] font-mono font-bold uppercase text-white/60">
-                          Active Center Feed
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-2xl relative z-10">
-                      <div className="space-y-0.5 text-left">
-                        <span className="block text-[8px] font-mono font-bold text-white/50 uppercase">
-                          ESTIMATED WAITING TIME
-                        </span>
-                        <div className="flex items-baseline gap-1">
-                          <span className={`text-2xl sm:text-3xl font-extrabold font-mono tracking-tight ${
-                            waitTimes.statusLevel === "optimal" 
-                              ? "text-blue-400" 
-                              : waitTimes.statusLevel === "moderate" 
-                              ? "text-blue-200" 
-                              : "text-slate-400"
-                          }`}>
-                            {waitTimes.waitTimeMinutes} MINS
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="text-right">
-                        <span className={`inline-block px-2.5 py-1 rounded text-[9px] font-bold font-mono uppercase ${
-                          waitTimes.statusLevel === "optimal" 
-                            ? "bg-blue-500/20 text-blue-300 border border-blue-500/30" 
-                            : waitTimes.statusLevel === "moderate" 
-                            ? "bg-blue-400/10 text-blue-200 border border-blue-400/20" 
-                            : "bg-slate-500/20 text-slate-300 border border-slate-500/30"
-                        }`}>
-                          {waitTimes.statusLevel === "optimal" 
-                            ? "Optimal Volume" 
-                            : waitTimes.statusLevel === "moderate" 
-                            ? "Moderate Traffic" 
-                            : "High Demand"}
-                        </span>
-                        <span className="block text-[9px] text-white/60 font-mono mt-1">
-                          {waitTimes.patientsInQueue} patients currently in queue
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2 text-left text-[11px] border-t border-white/5 pt-2 text-white/80 relative z-10">
-                      <div className="p-2.5 bg-white/5 rounded-xl border border-white/5">
-                        <span className="block text-[8px] font-mono text-white/40 uppercase font-bold">OPERATING CHAIRS</span>
-                        <span className="font-semibold">{waitTimes.activeChairs} of 5 Active</span>
-                      </div>
-                      <div className="p-2.5 bg-white/5 rounded-xl border border-white/5">
-                        <span className="block text-[8px] font-mono text-white/40 uppercase font-bold">BIOLOGICAL PROTECTION</span>
-                        <span className="font-semibold text-blue-400">ISO-7 Sterile Suite</span>
-                      </div>
-                    </div>
-
-                    {/* Sync action */}
-                    <div className="flex items-center justify-between pt-1 text-[9px] font-mono text-white/40 relative z-10">
-                      <div className="flex items-center gap-1">
-                        <span>Last synchronized:</span>
-                        <span className="font-semibold text-white/70">{waitTimes.lastUpdated}</span>
-                      </div>
-                      <button
-                        onClick={recalculateWaitTime}
-                        disabled={isWaitTimeRefreshing}
-                        className="flex items-center gap-1.5 text-brand-500 hover:text-brand-600 font-bold transition-colors cursor-pointer disabled:opacity-50"
-                      >
-                        <RefreshCw className={`w-3.5 h-3.5 ${isWaitTimeRefreshing ? "animate-spin" : ""}`} />
-                        <span>{isWaitTimeRefreshing ? "Syncing..." : "Sync Clinic Sensors"}</span>
-                      </button>
-                    </div>
                   </div>
                 </div>
 
@@ -2430,9 +2431,6 @@ export default function App() {
                 </div>
               </div>
             </section>
-
-            {/* LIVE GOOGLE REVIEWS & MAPS PLATFORM WIDGET */}
-            <GoogleReviewsWidget apiKey={GOOGLE_MAPS_API_KEY} />
 
             {/* NEW SECTION 1: BIO-COMPATIBLE MATERIAL SELECTOR & LAB */}
             <section className="py-20 bg-white border-b border-slate-200/60 relative font-sans">
