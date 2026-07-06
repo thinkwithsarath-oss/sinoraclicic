@@ -63,13 +63,13 @@ export default function AboutPage({ setActiveTab, scrollToScheduler }: AboutPage
       {/* 1. Header & Intro */}
       <div className="max-w-3xl space-y-4">
         <span className="text-xs font-mono font-bold tracking-widest text-brand-600 uppercase block">
-          CLINICAL LEADERSHIP & FOUNDERS
+          CLINICAL LEADERSHIP & TOP-RATED EXPERTS
         </span>
         <h1 className="text-4xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-          About Sinora Dental Hospital, Chennai
+          About Sinora Dental Hospital - Best Dental Clinic in Ashok Nagar Chennai
         </h1>
         <p className="text-slate-650 leading-relaxed text-sm sm:text-base">
-          Sinora Dental Hospital is Chennai's premier medical hub for computer-guided implants, micro-endodontics, and orthodontic alignments. Founded on the principles of biological biocompatibility, ISO-7 sterilization barriers, and transparent diagnostic data, we deliver predictable dental therapies with zero-pain codes.
+          Sinora Dental Hospital is recognized as the <span className="font-bold text-slate-800">best dental clinic in Ashok Nagar Chennai</span>, providing high-precision therapies and digital treatments. As Chennai's top-rated multi-specialty dental hub, we offer highly predictable results for <span className="font-bold text-slate-800">dental implants in Chennai</span>, <span className="font-bold text-slate-800">Invisalign clear aligners</span>, orthodontic braces, painless <span className="font-bold text-slate-800">root canal treatment in Ashok Nagar Chennai</span>, pediatric dentistry, and customized cosmetic smile design.
         </p>
       </div>
 

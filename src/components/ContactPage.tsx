@@ -64,10 +64,10 @@ export default function ContactPage() {
           COMMUNICATION TERMINAL
         </span>
         <h1 className="text-4xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-          Contact Our Ashok Nagar Clinic Node
+          Contact Sinora Dental Hospital - Best Dental Clinic in Ashok Nagar Chennai
         </h1>
         <p className="text-slate-650 leading-relaxed text-sm sm:text-base">
-          Get in touch with our front-desk coordinators. We respond to all digital inquiries within two business hours. For immediate medical emergencies or severe dental pain triaging, call our direct helpline.
+          Connect with the <span className="font-bold text-slate-800">best dentists in Chennai</span> at Sinora Dental Hospital. Whether you have questions about <span className="font-bold text-slate-800">dental implants cost in Chennai</span>, <span className="font-bold text-slate-800">Invisalign clear aligners</span>, single-sitting root canals, or urgent tooth pain relief, our Ashok Nagar dental clinic team is ready to assist you.
         </p>
       </div>
 

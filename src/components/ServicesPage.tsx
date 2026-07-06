@@ -168,10 +168,10 @@ export default function ServicesPage({
           TREATMENT CATALOG & MEDICAL STANDARDS
         </span>
         <h1 className="text-4xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-          Dental Treatments, Clinical Protocols & Pricing
+          Dental Treatments, Root Canal, Aligners & Dental Implants in Chennai
         </h1>
         <p className="text-slate-550 max-w-3xl leading-relaxed text-sm sm:text-base">
-          Review exhaustive clinical guidelines, indicators, and scheduled procedural phases for all therapies conducted at Sinora Dental Hospital in Chennai. Our protocols comply with international sterile codes.
+          Review clinical guidelines, indicators, and exact dental treatment pricing options at the <span className="font-bold text-slate-800">best dental clinic in Ashok Nagar Chennai</span>. Find premium <span className="font-bold text-slate-800">dental implants in Chennai</span>, painless <span className="font-bold text-slate-800">root canal treatment in Chennai</span>, and <span className="font-bold text-slate-800">Invisalign clear aligners</span> designed to protect and perfect your smile.
         </p>
 
         {/* Search filter */}

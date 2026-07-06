@@ -1274,13 +1274,11 @@ export default function App() {
                 {/* Center Main Header Block */}
                 <div className="max-w-5xl mx-auto space-y-6">
                   <h1 className="text-[38px] md:text-[50px] font-bold tracking-tight text-slate-900 leading-[1.2] font-display">
-                    Top & Best <span className="text-brand-500">Dental Clinic</span>
-                    <br />
-                    <span className="text-brand-500">Treatments</span> in <span className="text-brand-600">Chennai</span>
+                    Best <span className="text-brand-500">Dental Hospital & Clinic</span> in <span className="text-brand-600">Ashok Nagar Chennai</span>
                   </h1>
                   
                   <p className="text-base sm:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
-                    Chennai's most trusted <span className="font-bold text-slate-800">dentists, orthodontic care & clear aligners</span> — delivering stunning stage-ready smiles, pain-free root canals, laser surgery & dental implants across Chennai.
+                    Welcome to <span className="font-bold text-slate-800">Sinora Dental Hospital</span>, Chennai's premium destination for advanced <span className="font-bold text-slate-800">dental implants in Chennai</span>, painless <span className="font-bold text-slate-800">root canal treatment</span>, <span className="font-bold text-slate-800">Invisalign clear aligners</span>, and cosmetic smile makeovers by the <span className="font-bold text-slate-800">best dentists in Ashok Nagar Chennai</span>.
                   </p>
                 </div>
 

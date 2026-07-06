@@ -247,10 +247,10 @@ export default function BlogPage({ setActiveTab, setAppointmentForm }: BlogPageP
           CLINICAL HEALTH KNOWLEDGE BASE
         </span>
         <h1 className="text-4xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-          Oral Health & Clinical Research Blog
+          Dental & Oral Health Blog - Best Dental Hospital in Ashok Nagar Chennai
         </h1>
         <p className="text-slate-650 max-w-3xl leading-relaxed text-sm sm:text-base">
-          Read clinically cited analysis, technological writeups, and diagnostic guidelines published directly by our dental board in Ashok Nagar, Chennai.
+          Read expert-authored insights and articles about <span className="font-bold text-slate-800">Invisalign clear aligners</span>, premium <span className="font-bold text-slate-800">dental implants cost in Chennai</span>, painless <span className="font-bold text-slate-800">root canal treatment in Chennai</span>, and modern braces, written by the <span className="font-bold text-slate-800">best dentists in Ashok Nagar Chennai</span>.
         </p>
 
         {/* Filters and Search Row */}

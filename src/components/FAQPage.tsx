@@ -119,10 +119,10 @@ export default function FAQPage({ setActiveTab, openChatBot }: FAQPageProps) {
           ANSWER ENGINE OPTIMIZATION HUB
         </span>
         <h1 className="text-4xl font-extrabold font-display tracking-tight text-slate-900 leading-tight">
-          Frequently Asked Clinical Questions
+          Dental FAQ - Best Dental Hospital in Ashok Nagar Chennai
         </h1>
         <p className="text-slate-650 leading-relaxed text-sm sm:text-base">
-          Our FAQ database is configured with structural medical terminologies to optimize automated voice-assistant responses and provide clear, clinically accurate answers.
+          Get answers from the <span className="font-bold text-slate-800">best dentists in Chennai</span> about <span className="font-bold text-slate-800">Invisalign clear aligners</span>, affordable <span className="font-bold text-slate-800">dental implants cost in Chennai</span>, single-sitting <span className="font-bold text-slate-800">root canal treatment in Ashok Nagar Chennai</span>, and modern braces.
         </p>
 
         {/* Filters and Search Row */}
